@@ -13,6 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: CounterDownApp(),
     );
   }
@@ -55,9 +56,9 @@ class _CounterDownAppState extends State<CounterDownApp> {
           "Pomodoro App",
           style: TextStyle(color: Colors.white, fontSize: 28),
         ),
-        backgroundColor: Color.fromARGB(255, 50, 65, 71),
+        backgroundColor: Color.fromRGBO(26, 141, 128, 1),
       ),
-      backgroundColor: Color.fromARGB(255, 33, 40, 43),
+      backgroundColor: Colors.black,
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -99,7 +100,7 @@ class _CounterDownAppState extends State<CounterDownApp> {
                       },
                       child: Text(
                         (repeatedFunction!.isActive) ? "Stop" : "Resume",
-                        style: TextStyle(fontSize: 22),
+                        style: TextStyle(fontSize: 22,color: Colors.white),
                       ),
                       style: ButtonStyle(
                         backgroundColor: MaterialStateProperty.all(
@@ -122,7 +123,7 @@ class _CounterDownAppState extends State<CounterDownApp> {
                       },
                       child: Text(
                         "CANCEL",
-                        style: TextStyle(fontSize: 19),
+                        style: TextStyle(fontSize: 19,color: Colors.white),
                       ),
                       style: ButtonStyle(
                         backgroundColor: MaterialStateProperty.all(
@@ -143,7 +144,7 @@ class _CounterDownAppState extends State<CounterDownApp> {
                   },
                   child: Text(
                     "Start Studying",
-                    style: TextStyle(fontSize: 23),
+                    style: TextStyle(fontSize: 23, color: Colors.white),
                   ),
                   style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all(
